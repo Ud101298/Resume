@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Resume/'  // Replace 'Resume' with your repository
+  base: './'  // Updated for GitHub Pages
 })
