@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Resume/', // 👈 This is the key fix
+  base: '/', // 👈 This is the key fix
 })
