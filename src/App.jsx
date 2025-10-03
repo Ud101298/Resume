@@ -174,7 +174,7 @@ const Coin = styled.div`
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Resume">
       <Routes>
         <Route path="/" element={
           <GameContainer>
