@@ -222,308 +222,330 @@ function EducationPage() {
   );
 }
 
+// Experience page component
+function ExperiencePage() {
+  const navigate = useNavigate();
+  
+  return (
+    <GameContainer>
+      <MainContent>
+        <Title>Experience Level 1</Title>
+        <div style={{ 
+          color: '#FFD700', 
+          marginBottom: '20px',
+          width: '100%',
+          maxWidth: '900px',
+          backgroundColor: 'rgba(0, 0, 0, 0.3)',
+          padding: '20px',
+          borderRadius: '10px',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)'
+        }}>
+          <h2 style={{ 
+            borderBottom: '2px solid #FFD700',
+            paddingBottom: '10px',
+            marginBottom: '20px'
+          }}>Recent Professional Experience</h2>
+          <div style={{ 
+            marginBottom: '25px',
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            padding: '15px',
+            borderRadius: '8px',
+            transition: 'transform 0.2s',
+            ':hover': {
+              transform: 'translateY(-2px)'
+            }
+          }}>
+            <h3 style={{ 
+              color: '#FFD700',
+              marginBottom: '10px',
+              fontSize: 'clamp(0.9rem, 1.5vw, 1.2rem)'
+            }}>NCR Atleos Corporation | Software Engineer</h3>
+            <p style={{ 
+              color: '#AAA',
+              marginBottom: '12px',
+              fontSize: 'clamp(0.8rem, 1.2vw, 1rem)'
+            }}>Nov 2024 - Present | Gurugram, India</p>
+            <ul style={{ 
+              listStyleType: 'none', 
+              padding: '0',
+              fontSize: 'clamp(0.8rem, 1.2vw, 0.95rem)',
+              lineHeight: '1.6'
+            }}>
+              <li>• Designed and implemented automation solutions for Anaplan & EPM Cloud processes</li>
+              <li>• Managed product backlog and translated business requirements into technical solutions</li>
+              <li>• Achieved 95% on-time delivery through 2-week sprint cycles</li>
+              <li>• Led SIT, UAT, SAT, and Hypercare phases for EPM/Anaplan solutions</li>
+            </ul>
+          </div>
+          <div style={{ 
+            marginBottom: '25px',
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            padding: '15px',
+            borderRadius: '8px'
+          }}>
+            <h3 style={{ 
+              color: '#FFD700',
+              marginBottom: '10px',
+              fontSize: 'clamp(0.9rem, 1.5vw, 1.2rem)'
+            }}>NCR Voyix Corporation | IT Product Owner</h3>
+            <p style={{ 
+              color: '#AAA',
+              marginBottom: '12px',
+              fontSize: 'clamp(0.8rem, 1.2vw, 1rem)'
+            }}>Mar 2024 - Nov 2024 | Gurugram, India</p>
+            <ul style={{ 
+              listStyleType: 'none', 
+              padding: '0',
+              fontSize: 'clamp(0.8rem, 1.2vw, 0.95rem)',
+              lineHeight: '1.6'
+            }}>
+              <li>• Bridged IT & Business for Anaplan supply chain and financial planning</li>
+              <li>• Enhanced Oracle ARCS and EPM modules through prioritized roadmap</li>
+              <li>• Designed financial planning dashboards and KPIs with stakeholders</li>
+              <li>• Improved sprint completion rate by 20% through Agile ceremonies</li>
+            </ul>
+          </div>
+        </div>
+        <div style={{ display: 'flex', gap: '20px' }}>
+          <StartButton onClick={() => navigate('/education')}>
+            ← PREVIOUS
+          </StartButton>
+          <StartButton onClick={() => navigate('/experience2')}>
+            NEXT PAGE →
+          </StartButton>
+        </div>
+      </MainContent>
+    </GameContainer>
+  );
+}
+
+// Experience2 page component
+function Experience2Page() {
+  const navigate = useNavigate();
+  
+  return (
+    <GameContainer>
+      <MainContent>
+        <Title>Experience Level 2</Title>
+        <div style={{ 
+          color: '#FFD700', 
+          marginBottom: '20px',
+          width: '100%',
+          maxWidth: '900px',
+          backgroundColor: 'rgba(0, 0, 0, 0.3)',
+          padding: '20px',
+          borderRadius: '10px',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)'
+        }}>
+          <h2 style={{ 
+            borderBottom: '2px solid #FFD700',
+            paddingBottom: '10px',
+            marginBottom: '20px'
+          }}>Previous Experience</h2>
+          <div style={{ 
+            marginBottom: '25px',
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            padding: '15px',
+            borderRadius: '8px'
+          }}>
+            <h3 style={{ 
+              color: '#FFD700',
+              marginBottom: '10px',
+              fontSize: 'clamp(0.9rem, 1.5vw, 1.2rem)'
+            }}>NCR Atleos Corporation | IT Product Owner</h3>
+            <p style={{ 
+              color: '#AAA',
+              marginBottom: '12px',
+              fontSize: 'clamp(0.8rem, 1.2vw, 1rem)'
+            }}>Oct 2023 - Mar 2024 | Gurugram, India</p>
+            <ul style={{ 
+              listStyleType: 'none', 
+              padding: '0',
+              fontSize: 'clamp(0.8rem, 1.2vw, 0.95rem)',
+              lineHeight: '1.6'
+            }}>
+              <li>• Deployed EPM Cloud features for streamlined reporting</li>
+              <li>• Delivered new forecasting and planning capabilities</li>
+            </ul>
+          </div>
+          <div style={{ 
+            marginBottom: '25px',
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            padding: '15px',
+            borderRadius: '8px'
+          }}>
+            <h3 style={{ 
+              color: '#FFD700',
+              marginBottom: '10px',
+              fontSize: 'clamp(0.9rem, 1.5vw, 1.2rem)'
+            }}>NCR Corporation | IT Product Owner</h3>
+            <p style={{ 
+              color: '#AAA',
+              marginBottom: '12px',
+              fontSize: 'clamp(0.8rem, 1.2vw, 1rem)'
+            }}>Apr 2023 - Oct 2023 | Gurugram, India</p>
+            <ul style={{ 
+              listStyleType: 'none', 
+              padding: '0',
+              fontSize: 'clamp(0.8rem, 1.2vw, 0.95rem)',
+              lineHeight: '1.6'
+            }}>
+              <li>• Enhanced EPM Cloud modules for financial operations</li>
+              <li>• Led sprint planning and testing phases</li>
+            </ul>
+          </div>
+          <div style={{ 
+            marginBottom: '25px',
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            padding: '15px',
+            borderRadius: '8px'
+          }}>
+            <h3 style={{ 
+              color: '#FFD700',
+              marginBottom: '10px',
+              fontSize: 'clamp(0.9rem, 1.5vw, 1.2rem)'
+            }}>NCR Corporation | Application Development Engineer</h3>
+            <p style={{ 
+              color: '#AAA',
+              marginBottom: '12px',
+              fontSize: 'clamp(0.8rem, 1.2vw, 1rem)'
+            }}>Oct 2020 - Apr 2023 | Gurugram, India</p>
+            <ul style={{ 
+              listStyleType: 'none', 
+              padding: '0',
+              fontSize: 'clamp(0.8rem, 1.2vw, 0.95rem)',
+              lineHeight: '1.6'
+            }}>
+              <li>• Developed Anaplan models for Supply Chain and Forecasting</li>
+              <li>• Automated data loads to improve refresh efficiency</li>
+              <li>• Maintained Oracle DRM applications and led year-end activities</li>
+              <li>• Implemented Informatica Cloud integrations for finance automation</li>
+            </ul>
+          </div>
+        </div>
+        <div style={{ display: 'flex', gap: '20px' }}>
+          <StartButton onClick={() => navigate('/experience')}>
+            ← PREVIOUS
+          </StartButton>
+          <StartButton onClick={() => navigate('/skills')}>
+            NEXT LEVEL →
+          </StartButton>
+        </div>
+      </MainContent>
+    </GameContainer>
+  );
+}
+
+// Skills page component
+function SkillsPage() {
+  const navigate = useNavigate();
+  
+  return (
+    <GameContainer>
+      <MainContent>
+        <Title>Skills Level</Title>
+        <div style={{ 
+          color: '#FFD700', 
+          marginBottom: '20px',
+          width: '100%',
+          maxWidth: '900px',
+          backgroundColor: 'rgba(0, 0, 0, 0.3)',
+          padding: '20px',
+          borderRadius: '10px',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)'
+        }}>
+          <h2 style={{ 
+            borderBottom: '2px solid #FFD700',
+            paddingBottom: '10px',
+            marginBottom: '20px'
+          }}>Technical Skills</h2>
+          <div style={{ marginBottom: '15px' }}>
+            <h3>Languages & Frameworks</h3>
+            <p>JavaScript • Python • Java • React.js • Node.js • Shell • Batch</p>
+          </div>
+          <div style={{ marginBottom: '15px' }}>
+            <h3>Developer Tools</h3>
+            <p>Git • Azure PySpark • Azure Pipelines • Azure DevOps • IICS • OIC • OCI</p>
+          </div>
+          <div>
+            <h3>Technologies</h3>
+            <p>MongoDB • Anaplan • EPM Cloud • ARCS • REST APIs • ERP</p>
+          </div>
+        </div>
+        <div style={{ display: 'flex', gap: '20px' }}>
+          <StartButton onClick={() => navigate('/experience2')}>
+            ← PREVIOUS
+          </StartButton>
+          <StartButton onClick={() => navigate('/projects')}>
+            NEXT LEVEL →
+          </StartButton>
+        </div>
+      </MainContent>
+    </GameContainer>
+  );
+}
+
+// Projects page component
+function ProjectsPage() {
+  const navigate = useNavigate();
+  
+  return (
+    <GameContainer>
+      <MainContent>
+        <Title>Projects Level</Title>
+        <div style={{ 
+          color: '#FFD700', 
+          marginBottom: '20px',
+          width: '100%',
+          maxWidth: '900px',
+          backgroundColor: 'rgba(0, 0, 0, 0.3)',
+          padding: '20px',
+          borderRadius: '10px',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)'
+        }}>
+          <h2 style={{ 
+            borderBottom: '2px solid #FFD700',
+            paddingBottom: '10px',
+            marginBottom: '20px'
+          }}>Certifications</h2>
+          <div style={{ marginBottom: '15px' }}>
+            <h3>Anaplan Level 1,2 ,Professional Model Builder</h3>
+            <p>Issued by Anaplan </p>
+          </div>
+          <div style={{ marginBottom: '15px' }}>
+          </div>
+          <div style={{ marginBottom: '15px' }}>
+            <h3>Oracle DRM</h3>
+            <p>Issued by Oracle </p>
+          </div>
+          <div>
+            <h3>OCI Gen AI Professional</h3>
+            <p>Issued by Oracle </p>
+          </div>
+        </div>
+        <div style={{ display: 'flex', gap: '20px' }}>
+          <StartButton onClick={() => navigate('/skills')}>
+            ← PREVIOUS
+          </StartButton>
+          <StartButton onClick={() => navigate('/')}>
+            RETURN TO START
+          </StartButton>
+        </div>
+      </MainContent>
+    </GameContainer>
+  );
+}
+
 function App() {
   return (
     <Router basename="/Resume">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/education" element={<EducationPage />} />
-        <Route path="/experience" element={
-          <GameContainer>
-            <MainContent>
-              <Title>Experience Level 1</Title>
-              <div style={{ 
-                color: '#FFD700', 
-                marginBottom: '20px',
-                width: '100%',
-                maxWidth: '900px',
-                backgroundColor: 'rgba(0, 0, 0, 0.3)',
-                padding: '20px',
-                borderRadius: '10px',
-                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)'
-              }}>
-                <h2 style={{ 
-                  borderBottom: '2px solid #FFD700',
-                  paddingBottom: '10px',
-                  marginBottom: '20px'
-                }}>Recent Professional Experience</h2>
-                <div style={{ 
-                  marginBottom: '25px',
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  padding: '15px',
-                  borderRadius: '8px',
-                  transition: 'transform 0.2s',
-                  ':hover': {
-                    transform: 'translateY(-2px)'
-                  }
-                }}>
-                  <h3 style={{ 
-                    color: '#FFD700',
-                    marginBottom: '10px',
-                    fontSize: 'clamp(0.9rem, 1.5vw, 1.2rem)'
-                  }}>NCR Atleos Corporation | Software Engineer</h3>
-                  <p style={{ 
-                    color: '#AAA',
-                    marginBottom: '12px',
-                    fontSize: 'clamp(0.8rem, 1.2vw, 1rem)'
-                  }}>Nov 2024 - Present | Gurugram, India</p>
-                  <ul style={{ 
-                    listStyleType: 'none', 
-                    padding: '0',
-                    fontSize: 'clamp(0.8rem, 1.2vw, 0.95rem)',
-                    lineHeight: '1.6'
-                  }}>
-                    <li>• Designed and implemented automation solutions for Anaplan & EPM Cloud processes</li>
-                    <li>• Managed product backlog and translated business requirements into technical solutions</li>
-                    <li>• Achieved 95% on-time delivery through 2-week sprint cycles</li>
-                    <li>• Led SIT, UAT, SAT, and Hypercare phases for EPM/Anaplan solutions</li>
-                  </ul>
-                </div>
-                <div style={{ 
-                  marginBottom: '25px',
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  padding: '15px',
-                  borderRadius: '8px'
-                }}>
-                  <h3 style={{ 
-                    color: '#FFD700',
-                    marginBottom: '10px',
-                    fontSize: 'clamp(0.9rem, 1.5vw, 1.2rem)'
-                  }}>NCR Voyix Corporation | IT Product Owner</h3>
-                  <p style={{ 
-                    color: '#AAA',
-                    marginBottom: '12px',
-                    fontSize: 'clamp(0.8rem, 1.2vw, 1rem)'
-                  }}>Mar 2024 - Nov 2024 | Gurugram, India</p>
-                  <ul style={{ 
-                    listStyleType: 'none', 
-                    padding: '0',
-                    fontSize: 'clamp(0.8rem, 1.2vw, 0.95rem)',
-                    lineHeight: '1.6'
-                  }}>
-                    <li>• Bridged IT & Business for Anaplan supply chain and financial planning</li>
-                    <li>• Enhanced Oracle ARCS and EPM modules through prioritized roadmap</li>
-                    <li>• Designed financial planning dashboards and KPIs with stakeholders</li>
-                    <li>• Improved sprint completion rate by 20% through Agile ceremonies</li>
-                  </ul>
-                </div>
-              </div>
-              <div style={{ display: 'flex', gap: '20px' }}>
-                <StartButton onClick={() => window.location.href = '/Resume/education'}>
-                  ← PREVIOUS
-                </StartButton>
-                <StartButton onClick={() => window.location.href = '/Resume/experience2'}>
-                  NEXT PAGE →
-                </StartButton>
-              </div>
-            </MainContent>
-          </GameContainer>
-        } />
-        <Route path="/experience2" element={
-          <GameContainer>
-            <MainContent>
-              <Title>Experience Level 2</Title>
-              <div style={{ 
-                color: '#FFD700', 
-                marginBottom: '20px',
-                width: '100%',
-                maxWidth: '900px',
-                backgroundColor: 'rgba(0, 0, 0, 0.3)',
-                padding: '20px',
-                borderRadius: '10px',
-                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)'
-              }}>
-                <h2 style={{ 
-                  borderBottom: '2px solid #FFD700',
-                  paddingBottom: '10px',
-                  marginBottom: '20px'
-                }}>Previous Experience</h2>
-                <div style={{ 
-                  marginBottom: '25px',
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  padding: '15px',
-                  borderRadius: '8px'
-                }}>
-                  <h3 style={{ 
-                    color: '#FFD700',
-                    marginBottom: '10px',
-                    fontSize: 'clamp(0.9rem, 1.5vw, 1.2rem)'
-                  }}>NCR Atleos Corporation | IT Product Owner</h3>
-                  <p style={{ 
-                    color: '#AAA',
-                    marginBottom: '12px',
-                    fontSize: 'clamp(0.8rem, 1.2vw, 1rem)'
-                  }}>Oct 2023 - Mar 2024 | Gurugram, India</p>
-                  <ul style={{ 
-                    listStyleType: 'none', 
-                    padding: '0',
-                    fontSize: 'clamp(0.8rem, 1.2vw, 0.95rem)',
-                    lineHeight: '1.6'
-                  }}>
-                    <li>• Deployed EPM Cloud features for streamlined reporting</li>
-                    <li>• Delivered new forecasting and planning capabilities</li>
-                  </ul>
-                </div>
-                <div style={{ 
-                  marginBottom: '25px',
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  padding: '15px',
-                  borderRadius: '8px'
-                }}>
-                  <h3 style={{ 
-                    color: '#FFD700',
-                    marginBottom: '10px',
-                    fontSize: 'clamp(0.9rem, 1.5vw, 1.2rem)'
-                  }}>NCR Corporation | IT Product Owner</h3>
-                  <p style={{ 
-                    color: '#AAA',
-                    marginBottom: '12px',
-                    fontSize: 'clamp(0.8rem, 1.2vw, 1rem)'
-                  }}>Apr 2023 - Oct 2023 | Gurugram, India</p>
-                  <ul style={{ 
-                    listStyleType: 'none', 
-                    padding: '0',
-                    fontSize: 'clamp(0.8rem, 1.2vw, 0.95rem)',
-                    lineHeight: '1.6'
-                  }}>
-                    <li>• Enhanced EPM Cloud modules for financial operations</li>
-                    <li>• Led sprint planning and testing phases</li>
-                  </ul>
-                </div>
-                <div style={{ 
-                  marginBottom: '25px',
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  padding: '15px',
-                  borderRadius: '8px'
-                }}>
-                  <h3 style={{ 
-                    color: '#FFD700',
-                    marginBottom: '10px',
-                    fontSize: 'clamp(0.9rem, 1.5vw, 1.2rem)'
-                  }}>NCR Corporation | Application Development Engineer</h3>
-                  <p style={{ 
-                    color: '#AAA',
-                    marginBottom: '12px',
-                    fontSize: 'clamp(0.8rem, 1.2vw, 1rem)'
-                  }}>Oct 2020 - Apr 2023 | Gurugram, India</p>
-                  <ul style={{ 
-                    listStyleType: 'none', 
-                    padding: '0',
-                    fontSize: 'clamp(0.8rem, 1.2vw, 0.95rem)',
-                    lineHeight: '1.6'
-                  }}>
-                    <li>• Developed Anaplan models for Supply Chain and Forecasting</li>
-                    <li>• Automated data loads to improve refresh efficiency</li>
-                    <li>• Maintained Oracle DRM applications and led year-end activities</li>
-                    <li>• Implemented Informatica Cloud integrations for finance automation</li>
-                  </ul>
-                </div>
-              </div>
-              <div style={{ display: 'flex', gap: '20px' }}>
-                <StartButton onClick={() => window.location.href = '/Resume/experience'}>
-                  ← PREVIOUS
-                </StartButton>
-                <StartButton onClick={() => window.location.href = '/Resume/skills'}>
-                  NEXT LEVEL →
-                </StartButton>
-              </div>
-            </MainContent>
-          </GameContainer>
-        } />
-        <Route path="/skills" element={
-          <GameContainer>
-            <MainContent>
-              <Title>Skills Level</Title>
-              <div style={{ 
-                color: '#FFD700', 
-                marginBottom: '20px',
-                width: '100%',
-                maxWidth: '900px',
-                backgroundColor: 'rgba(0, 0, 0, 0.3)',
-                padding: '20px',
-                borderRadius: '10px',
-                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)'
-              }}>
-                <h2 style={{ 
-                  borderBottom: '2px solid #FFD700',
-                  paddingBottom: '10px',
-                  marginBottom: '20px'
-                }}>Technical Skills</h2>
-                <div style={{ marginBottom: '15px' }}>
-                  <h3>Languages & Frameworks</h3>
-                  <p>JavaScript • Python • Java • React.js • Node.js • Shell • Batch</p>
-                </div>
-                <div style={{ marginBottom: '15px' }}>
-                  <h3>Developer Tools</h3>
-                  <p>Git • Azure PySpark • Azure Pipelines • Azure DevOps • IICS • OIC • OCI</p>
-                </div>
-                <div>
-                  <h3>Technologies</h3>
-                  <p>MongoDB • Anaplan • EPM Cloud • ARCS • REST APIs • ERP</p>
-                </div>
-              </div>
-              <div style={{ display: 'flex', gap: '20px' }}>
-                <StartButton onClick={() => window.location.href = '/Resume/experience2'}>
-                  ← PREVIOUS
-                </StartButton>
-                <StartButton onClick={() => window.location.href = '/Resume/projects'}>
-                  NEXT LEVEL →
-                </StartButton>
-              </div>
-              {/* <StartButton onClick={() => window.location.href = '/Resume/projects'}>
-                NEXT LEVEL →
-              </StartButton> */}
-            </MainContent>
-          </GameContainer>
-        } />
-        <Route path="/projects" element={
-          <GameContainer>
-            <MainContent>
-              <Title>Projects Level</Title>
-              <div style={{ 
-                color: '#FFD700', 
-                marginBottom: '20px',
-                width: '100%',
-                maxWidth: '900px',
-                backgroundColor: 'rgba(0, 0, 0, 0.3)',
-                padding: '20px',
-                borderRadius: '10px',
-                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)'
-              }}>
-                <h2 style={{ 
-                  borderBottom: '2px solid #FFD700',
-                  paddingBottom: '10px',
-                  marginBottom: '20px'
-                }}>Certifications</h2>
-                <div style={{ marginBottom: '15px' }}>
-                  <h3>Anaplan Level 1,2 ,Professional Model Builder</h3>
-                  <p>Issued by Anaplan </p>
-                </div>
-                <div style={{ marginBottom: '15px' }}>
-                </div>
-                <div style={{ marginBottom: '15px' }}>
-                  <h3>Oracle DRM</h3>
-                  <p>Issued by Oracle </p>
-                </div>
-                <div>
-                  <h3>OCI Gen AI Professional</h3>
-                  <p>Issued by Oracle </p>
-                </div>
-              </div>
-              <div style={{ display: 'flex', gap: '20px' }}>
-                <StartButton onClick={() => window.location.href = '/Resume/skills'}>
-                  ← PREVIOUS
-                </StartButton>
-                <StartButton onClick={() => window.location.href ='/Resume/'}>
-                RETURN TO START
-                </StartButton>
-              </div>
-              {/* <StartButton onClick={() => window.location.href = '/Resume/'}>
-                RETURN TO START
-              </StartButton> */}
-            </MainContent>
-          </GameContainer>
-        } />
+        <Route path="/experience" element={<ExperiencePage />} />
+        <Route path="/experience2" element={<Experience2Page />} />
+        <Route path="/skills" element={<SkillsPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
       </Routes>
     </Router>
   )
