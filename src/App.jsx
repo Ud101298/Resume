@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom'
 import styled from '@emotion/styled'
 import { keyframes } from '@emotion/react'
 
@@ -172,48 +172,62 @@ const Coin = styled.div`
   }
 `
 
+// Home page component
+function HomePage() {
+  const navigate = useNavigate();
+  
+  return (
+    <GameContainer>
+      <Cloud />
+      <Cloud />
+      <Pipe style={{ left: '10%' }} />
+      <Pipe style={{ right: '10%' }} />
+      <Coin style={{ top: '30%', left: '40%' }} />
+      <Coin style={{ top: '25%', right: '35%' }} />
+      <MainContent>
+        <Title>Resume Quest</Title>
+        <StartButton onClick={() => navigate('/education')}>
+          START JOURNEY
+        </StartButton>
+      </MainContent>
+    </GameContainer>
+  );
+}
+
+// Education page component
+function EducationPage() {
+  const navigate = useNavigate();
+  
+  return (
+    <GameContainer>
+      <MainContent>
+        <Title>Education Level</Title>
+        <div style={{ color: '#FFD700', marginBottom: '20px' }}>
+          <h2>Amity University</h2>
+          <p>Bachelor of Technology</p>
+          <p>Computer Science and Engineering</p>
+          <p>CGPA: 8.4/10 | 2020 - 2024</p>
+          <p>Full Stack Development, Python,Web Designing,Content Writer</p>
+        </div>
+        <div style={{ display: 'flex', gap: '20px' }}>
+          <StartButton onClick={() => navigate('/')}>
+            ← PREVIOUS
+          </StartButton>
+          <StartButton onClick={() => navigate('/experience')}>
+            NEXT LEVEL →
+          </StartButton>
+        </div>
+      </MainContent>
+    </GameContainer>
+  );
+}
+
 function App() {
   return (
-    <Router>
+    <Router basename="/Resume">
       <Routes>
-        <Route path="/" element={
-          <GameContainer>
-            <Cloud />
-            <Cloud />
-            <Pipe style={{ left: '10%' }} />
-            <Pipe style={{ right: '10%' }} />
-            <Coin style={{ top: '30%', left: '40%' }} />
-            <Coin style={{ top: '25%', right: '35%' }} />
-            <MainContent>
-              <Title>Resume Quest</Title>
-              <StartButton onClick={() => window.location.href = '/education'}>
-                START JOURNEY
-              </StartButton>
-            </MainContent>
-          </GameContainer>
-        } />
-        <Route path="/education" element={
-          <GameContainer>
-            <MainContent>
-              <Title>Education Level</Title>
-              <div style={{ color: '#FFD700', marginBottom: '20px' }}>
-                <h2>Amity University</h2>
-                <p>Bachelor of Technology</p>
-                <p>Computer Science and Engineering</p>
-                <p>CGPA: 8.4/10 | 2020 - 2024</p>
-                <p>Full Stack Development, Python,Web Designing,Content Writer</p>
-              </div>
-              <div style={{ display: 'flex', gap: '20px' }}>
-                <StartButton onClick={() => window.location.href = '/'}>
-                  ← PREVIOUS
-                </StartButton>
-                <StartButton onClick={() => window.location.href = '/experience'}>
-                  NEXT LEVEL →
-                </StartButton>
-              </div>
-            </MainContent>
-          </GameContainer>
-        } />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/education" element={<EducationPage />} />
         <Route path="/experience" element={
           <GameContainer>
             <MainContent>
@@ -295,10 +309,10 @@ function App() {
                 </div>
               </div>
               <div style={{ display: 'flex', gap: '20px' }}>
-                <StartButton onClick={() => window.location.href = '/education'}>
+                <StartButton onClick={() => window.location.href = '/Resume/education'}>
                   ← PREVIOUS
                 </StartButton>
-                <StartButton onClick={() => window.location.href = '/experience2'}>
+                <StartButton onClick={() => window.location.href = '/Resume/experience2'}>
                   NEXT PAGE →
                 </StartButton>
               </div>
@@ -406,10 +420,10 @@ function App() {
                 </div>
               </div>
               <div style={{ display: 'flex', gap: '20px' }}>
-                <StartButton onClick={() => window.location.href = '/experience'}>
+                <StartButton onClick={() => window.location.href = '/Resume/experience'}>
                   ← PREVIOUS
                 </StartButton>
-                <StartButton onClick={() => window.location.href = '/skills'}>
+                <StartButton onClick={() => window.location.href = '/Resume/skills'}>
                   NEXT LEVEL →
                 </StartButton>
               </div>
@@ -517,10 +531,10 @@ function App() {
                 </div>
               </div>
               <div style={{ display: 'flex', gap: '20px' }}>
-                <StartButton onClick={() => window.location.href = '/experience'}>
+                <StartButton onClick={() => window.location.href = '/Resume/experience'}>
                   ← PREVIOUS
                 </StartButton>
-                <StartButton onClick={() => window.location.href = '/skills'}>
+                <StartButton onClick={() => window.location.href = '/Resume/skills'}>
                   NEXT LEVEL →
                 </StartButton>
               </div>
@@ -560,14 +574,14 @@ function App() {
                 </div>
               </div>
               <div style={{ display: 'flex', gap: '20px' }}>
-                <StartButton onClick={() => window.location.href = '/experience2'}>
+                <StartButton onClick={() => window.location.href = '/Resume/experience2'}>
                   ← PREVIOUS
                 </StartButton>
-                <StartButton onClick={() => window.location.href = '/projects'}>
+                <StartButton onClick={() => window.location.href = '/Resume/projects'}>
                   NEXT LEVEL →
                 </StartButton>
               </div>
-              {/* <StartButton onClick={() => window.location.href = '/projects'}>
+              {/* <StartButton onClick={() => window.location.href = '/Resume/projects'}>
                 NEXT LEVEL →
               </StartButton> */}
             </MainContent>
@@ -608,14 +622,14 @@ function App() {
                 </div>
               </div>
               <div style={{ display: 'flex', gap: '20px' }}>
-                <StartButton onClick={() => window.location.href = '/skills'}>
+                <StartButton onClick={() => window.location.href = '/Resume/skills'}>
                   ← PREVIOUS
                 </StartButton>
-                <StartButton onClick={() => window.location.href ='/'}>
+                <StartButton onClick={() => window.location.href ='/Resume/'}>
                 RETURN TO START
                 </StartButton>
               </div>
-              {/* <StartButton onClick={() => window.location.href = '/'}>
+              {/* <StartButton onClick={() => window.location.href = '/Resume/'}>
                 RETURN TO START
               </StartButton> */}
             </MainContent>
